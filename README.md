@@ -31,7 +31,7 @@ package main
 
 import (
     "fmt"
-    "github.com/root27/go-email"
+    "github.com/root27/go-mail"
 )
 func main(){
 	host := "HOST NAME" // e.g gmail, yandex
@@ -161,7 +161,11 @@ func main() {
 
 }
 
-``````
+```
+
+LICENSE
+
+[MIT](./LICENSE)
 
 
 
