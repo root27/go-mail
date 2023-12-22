@@ -34,11 +34,13 @@ import (
     "github.com/root27/go-email"
 )
 func main(){
-	host := "gmail"
+	host := "HOST NAME" // e.g gmail, yandex
 
-	from := "oguzhaneee@gmail.com"
+	from := "MAIL ADDRESS FROM WHICH YOU WILL SEND"
 
-	to := "oguzhaneee@gmail.com"
+	to := "MAIL ADDRESS TO WHICH YOU WILL SEND"
+
+	//PASSKEY IS THE KEY OF THE MAIL ADDRESS FROM WHICH YOU WILL SEND
 
 	subject := "test"
 
@@ -80,15 +82,19 @@ import (
 
 func main() {
 
-	host := "gmail"
+	host := "HOST NAME" // e.g gmail, yandex
 
-	from := "oguzhaneee@gmail.com"
+	from := "MAIL ADDRESS FROM WHICH YOU WILL SEND"
 
-	to := "oguzhaneee@gmail.com"
+	to := "MAIL ADDRESS TO WHICH YOU WILL SEND"
+
+	//PASSKEY IS THE KEY OF THE MAIL ADDRESS FROM WHICH YOU WILL SEND
 
 	subject := "Html test"
 
-	err := mail.SendWithHtml(host, from, "YOUR PASSKEY", to, subject, "./test.html")
+	htmlPath := "Path of the html file"
+
+	err := mail.SendWithHtml(host, from, "YOUR PASSKEY", to, subject, htmlPath)
 
 	if err != nil {
 		panic(err)
@@ -124,13 +130,18 @@ import (
 
 func main() {
 
-	host := "gmail"
+	host := "HOST NAME" // e.g gmail, yandex
 
-	from := "oguzhaneee@gmail.com"
+	from := "MAIL ADDRESS FROM WHICH YOU WILL SEND"
 
-	to := "oguzhaneee@gmail.com"
+	to := "MAIL ADDRESS TO WHICH YOU WILL SEND"
+
+	//PASSKEY IS THE KEY OF THE MAIL ADDRESS FROM WHICH YOU WILL SEND
 
 	subject := "Variable Test"
+
+
+	htmlPath := "Path of the html file"
 
 	data := struct {
 		Name string
@@ -140,7 +151,7 @@ func main() {
 		Age:  21,
 	}
 
-	err := mail.SendHtmlWithVariables(host, from, "YOUR PASSKEY", to, subject, "./testVariables.html", data)
+	err := mail.SendHtmlWithVariables(host, from, "YOUR PASSKEY", to, subject, htmlPath, data)
 
 	if err != nil {
 		panic(err)
