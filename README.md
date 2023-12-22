@@ -19,7 +19,7 @@ This function only sends text emails. You can find usage and details of the func
 
 ```go
 
-func SendEmail(host string, from string, passKey string, to string, subject string, body string) error
+func Send(host string, from string, passKey string, to string, subject string, body string) error
 
 ```
 
