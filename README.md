@@ -6,7 +6,7 @@ Simple send email package for Go.
 
 ```bash
 
-go get github.com/root27/go-email
+go get github.com/root27/go-mail
 
 ```
 
@@ -19,7 +19,7 @@ This function only sends text emails. You can find usage and details of the func
 
 ```go
 
-func SendEmail(host string, port int, from string, password string, to []string, subject string, body string) error
+func SendEmail(host string, from string, passKey string, to string, subject string, body string) error
 
 ```
 
